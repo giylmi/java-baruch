@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="terminatorQuoter" class="foo.bar.lab02.TerminatorQuoter">
+        <property name="quotes">
+            <list>
+                <value>To be or not to be</value>
+                <value>That is the question</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="foo.bar.lab02.ShakespeareQuoter" id="shakespeareQuoter">
+        <property name="quote" value="To be or not to be"/>
+    </bean>
+
+    <bean class="foo.bar.lab03.TalkingRobot" id="talkingRobot"
+            init-method="talk">
+        <property name="quoters">
+            <list>
+                <ref bean="shakespeareQuoter"/>
+                <ref bean="terminatorQuoter"/>
+            </list>
+        </property>
+    </bean>
+</beans>
