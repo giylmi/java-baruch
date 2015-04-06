@@ -27,8 +27,7 @@
     </bean>
 
     <bean id="runThisMethodBeanPostProcessor" class="foo.bar.lab04.RunThisMethodBeanPostProcessor"/>
+    <bean id="injectRandomIntBeanPostProcessor" class="foo.bar.lab04.InjectRandomIntBeanPostProcessor"/>
 
-    <bean class="foo.bar.lab05.BenchmarkProxySubject" name="subject"/>
-
-    <bean class="foo.bar.lab07.BenchmarkBeanPostProcessor" id="benchmarkBeanPostProcessor"/>
+    <bean class="foo.bar.lab04.RandomIntHolder"/>
 </beans>

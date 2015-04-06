@@ -9,6 +9,7 @@
             <list>
                 <value>To be or not to be</value>
                 <value>That is the question</value>
+                <ref bean="trustMe"/>
             </list>
         </property>
     </bean>
@@ -17,7 +18,8 @@
         <property name="quote" value="To be or not to be"/>
     </bean>
 
-    <bean class="foo.bar.lab03.TalkingRobot" id="talkingRobot">
+    <bean class="foo.bar.lab03.TalkingRobot" id="talkingRobot"
+            init-method="talk">
         <property name="quoters">
             <list>
                 <ref bean="shakespeareQuoter"/>
@@ -26,9 +28,8 @@
         </property>
     </bean>
 
-    <bean id="runThisMethodBeanPostProcessor" class="foo.bar.lab04.RunThisMethodBeanPostProcessor"/>
+    <bean class="java.lang.String" id="trustMe">
+        <constructor-arg type="java.lang.String" value="Trust me"/>
+    </bean>
 
-    <bean class="foo.bar.lab05.BenchmarkProxySubject" name="subject"/>
-
-    <bean class="foo.bar.lab07.BenchmarkBeanPostProcessor" id="benchmarkBeanPostProcessor"/>
 </beans>

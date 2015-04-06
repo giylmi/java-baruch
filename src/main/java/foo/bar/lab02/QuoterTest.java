@@ -1,6 +1,5 @@
 package foo.bar.lab02;
 
-import foo.bar.lab03.Robot;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -9,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class QuoterTest {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("context02.xml");
         Quoter quoter = context.getBean(Quoter.class);
         quoter.sayQuote();
     }

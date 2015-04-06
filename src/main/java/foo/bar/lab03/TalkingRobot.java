@@ -1,5 +1,6 @@
 package foo.bar.lab03;
 
+import foo.bar.lab01.RunThisMethod;
 import foo.bar.lab02.Quoter;
 
 import java.util.List;
@@ -20,6 +21,7 @@ public class TalkingRobot implements Robot {
     }
 
     @Override
+    @RunThisMethod
     public void talk() {
         for (Quoter quoter: quoters)
             quoter.sayQuote();

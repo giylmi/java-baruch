@@ -13,22 +13,8 @@
         </property>
     </bean>
 
-    <bean class="foo.bar.lab02.ShakespeareQuoter" id="shakespeareQuoter">
-        <property name="quote" value="To be or not to be"/>
-    </bean>
+    <!--<bean class="foo.bar.lab02.ShakespeareQuoter" id="shakespeareQuoter">-->
+        <!--<property name="quote" value="To be or not to be"/>-->
+    <!--</bean>-->
 
-    <bean class="foo.bar.lab03.TalkingRobot" id="talkingRobot">
-        <property name="quoters">
-            <list>
-                <ref bean="shakespeareQuoter"/>
-                <ref bean="terminatorQuoter"/>
-            </list>
-        </property>
-    </bean>
-
-    <bean id="runThisMethodBeanPostProcessor" class="foo.bar.lab04.RunThisMethodBeanPostProcessor"/>
-
-    <bean class="foo.bar.lab05.BenchmarkProxySubject" name="subject"/>
-
-    <bean class="foo.bar.lab07.BenchmarkBeanPostProcessor" id="benchmarkBeanPostProcessor"/>
 </beans>
