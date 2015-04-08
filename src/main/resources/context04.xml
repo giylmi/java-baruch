@@ -4,7 +4,7 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="terminatorQuoter" class="foo.bar.lab02.TerminatorQuoter">
+    <bean id="terminatorQuoter" class="foo.bar.day1.lab02.TerminatorQuoter">
         <property name="quotes">
             <list>
                 <value>To be or not to be</value>
@@ -13,11 +13,11 @@
         </property>
     </bean>
 
-    <bean class="foo.bar.lab02.ShakespeareQuoter" id="shakespeareQuoter">
+    <bean class="foo.bar.day1.lab02.ShakespeareQuoter" id="shakespeareQuoter">
         <property name="quote" value="To be or not to be"/>
     </bean>
 
-    <bean class="foo.bar.lab03.TalkingRobot" id="talkingRobot">
+    <bean class="foo.bar.day1.lab03.TalkingRobot" id="talkingRobot">
         <property name="quoters">
             <list>
                 <ref bean="shakespeareQuoter"/>
@@ -26,8 +26,8 @@
         </property>
     </bean>
 
-    <bean id="runThisMethodBeanPostProcessor" class="foo.bar.lab04.RunThisMethodBeanPostProcessor"/>
-    <bean id="injectRandomIntBeanPostProcessor" class="foo.bar.lab04.InjectRandomIntBeanPostProcessor"/>
+    <bean id="runThisMethodBeanPostProcessor" class="foo.bar.day1.lab04.RunThisMethodBeanPostProcessor"/>
+    <bean id="injectRandomIntBeanPostProcessor" class="foo.bar.day1.lab04.InjectRandomIntBeanPostProcessor"/>
 
-    <bean class="foo.bar.lab04.RandomIntHolder"/>
+    <bean class="foo.bar.day1.lab04.RandomIntHolder"/>
 </beans>
